@@ -14,11 +14,25 @@ namespace Mission10_Yoon.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Bowler> Get() 
+        public IEnumerable<object> Get()
         {
-            var bowlerData = _bowlingRepository.Bowlers.ToArray();
-                 
-            return bowlerData;
+            var joinedData = from Bowlers in _bowlingRepository.Bowlers
+                             join Teams in _bowlingRepository.Teams on Bowlers.TeamId equals Teams.TeamId
+                             select new JoinedBowler
+                             {
+                                 BowlerMiddleInit = Bowlers.BowlerMiddleInit,
+                                 BowlerAddress = Bowlers.BowlerAddress,
+                                 BowlerCity = Bowlers.BowlerCity,
+                                 BowlerID = Bowlers.BowlerId,
+                                 BowlerLastName = Bowlers.BowlerLastName,
+                                 BowlerFirstName = Bowlers.BowlerFirstName,
+                                 BowlerState = Bowlers.BowlerState,
+                                 BowlerZip = Bowlers.BowlerZip,
+                                 BowlerPhoneNumber = Bowlers.BowlerPhoneNumber,
+                                 TeamId = Bowlers.TeamId,
+                                 TeamName = Teams.TeamName
+                             };
+            return joinedData.Where(data => data.TeamName == "Marlins" || data.TeamName == "Sharks").ToList();
         }
     }
 }

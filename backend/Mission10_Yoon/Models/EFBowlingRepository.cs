@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace Mission10_Yoon.Models
 {
     public class EFBowlingRepository : IBowlingRepository
@@ -9,5 +11,6 @@ namespace Mission10_Yoon.Models
         }
 
         public IEnumerable<Bowler> Bowlers => _bowlingcontext.Bowlers;
+        public IEnumerable<Team> Teams => _bowlingcontext.Teams;
     }
 }

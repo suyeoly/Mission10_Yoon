@@ -1,5 +1,6 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission10_Yoon.Models;
 
@@ -22,8 +23,6 @@ public partial class Bowler
     public string? BowlerZip { get; set; }
 
     public string? BowlerPhoneNumber { get; set; }
-
     public int? TeamId { get; set; }
-
     public virtual Team? Team { get; set; }
 }

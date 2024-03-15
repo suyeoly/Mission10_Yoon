@@ -125,3 +125,4 @@ C:\REACT\Mission10_Yoon\backend\Mission10_Yoon\obj\Debug\net8.0\refint\Mission10
 C:\REACT\Mission10_Yoon\backend\Mission10_Yoon\obj\Debug\net8.0\Mission10_Yoon.pdb
 C:\REACT\Mission10_Yoon\backend\Mission10_Yoon\obj\Debug\net8.0\Mission10_Yoon.genruntimeconfig.cache
 C:\REACT\Mission10_Yoon\backend\Mission10_Yoon\obj\Debug\net8.0\ref\Mission10_Yoon.dll
+C:\REACT\Mission10_Yoon\backend\Mission10_Yoon\obj\Debug\net8.0\Mission10_Yoon.sourcelink.json
